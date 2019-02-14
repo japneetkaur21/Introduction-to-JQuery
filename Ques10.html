@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+    .sub-menu{
+        padding:10px 0 0 0;
+        display:none;
+        }
+        .sub-menu li{
+            padding-bottom:10px;
+        }
+        
+    </style>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+</head>
+<body>
+<ul class="main-menu">
+        <li>Menu
+        <ul class="sub-menu">
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+        </ul>
+        </li>
+    </ul>
+<script>
+//$(document).ready(function(){
+//$('.menu').hover(
+//function(){
+//$(this).children('.choose').slideDown('fast');
+//});
+//function () {
+//$(this).children('.choose').slideUp('fast');
+//});
+//});
+    
+    
+    $('.main-menu > li').hover(function(){
+        $(this).children('.sub-menu').fadeToggle();
+    })
+</script>
+    </body>
+</html>
