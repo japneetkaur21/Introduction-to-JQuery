@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>map demo</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+<div class="max">
+Line 1<br>
+Line 2
+</div>
+<div class="max">
+Line 1<br>
+Line 2<br>
+Line 3<br>
+Line 4
+</div>
+<div class="max">
+Line 1
+</div>
+<div class="max">
+Line 1<br>
+Line 2
+</div>
+</div>
+<script>
+var highest = null;
+var hi = 0;
+$(".max").each(function(){
+var h = $(this).height();
+if(h > hi){
+hi = h;
+highest = $(this);  
+}    
+});
+$(highest).css("background-color", "red");
+</script>
+
+

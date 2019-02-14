@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<table style="width:100%" border="2px">
+<tr>
+<td class="tdc"><div>5</div></td>
+<td class="tdc"><div>11</div></td>
+<td class="tdc"><div>15</div></td>
+</tr>
+<tr>
+<td class="tdc"><div>6</div></td>
+<td class="tdc"><div>12</div></td>
+<td class="tdc"><div>8</div></td>
+</tr>
+<tr>
+<td class="tdc"><div>4</div></td>
+<td class="tdc"><div>13</div></td>
+<td class="tdc"><div>22</div></td>
+</tr>
+</table>
+<script>
+$( document ).ready(function() {
+$('td.tdc').each(function( index ) {
+if($( this ).text()>=10){
+$(this).css("background-color","yellow");      
+}        
+});
+});
+</script>

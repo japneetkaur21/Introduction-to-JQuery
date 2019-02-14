@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+var image_slide = new Array("01.jpg", "02.jpg","03.jpg","04.jpg","05.jpg");
+var image_length = image_slide.length;
+var image_current = -1;
+function slide(){
+if (image_current == image_length){
+image_current =0;
+} else {
+image_current++;
+}
+document.slideshow.src = image_slide[image_current];
+}
+function AutoNext () {
+setInterval(slide, 500);
+}
+window.onload = function(){
+slide();
+AutoNext();
+}
+</script>
+<div id="slider">
+<img name="slideshow" />
+</div>
+

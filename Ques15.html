@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$.get("https://jsonplaceholder.typicode.com/posts", function(data, status){
+alert("Result: " + data + "\nResult Status: " + status);
+});
+});
+});
+</script>
+<button>Click here to get the result</button>
+</body>
+</html>
+
